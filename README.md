@@ -33,17 +33,22 @@ Las cinco pruebas del codelab comprueban estado inicial, agregar una tarea, rech
 
 Validación realizada: `testDebugUnitTest assembleDebug` terminó con **BUILD SUCCESSFUL**; las **5 pruebas pasaron**, sin fallos ni errores, y se generó `app/build/outputs/apk/debug/app-debug.apk`. En este equipo se indicó a Gradle la ruta del JDK 17 local mediante `-Porg.gradle.java.installations.paths=...`; esta ruta depende de cada instalación.
 
-### Evidencia y pasos pendientes para entregar
+### Evidencia en dispositivo real
 
-No se adjunta todavía una captura: el emulador x86_64 instalado no pudo iniciar por falta de aceleración compatible en el equipo ARM. No hay una ejecución visual verificada.
+Se instaló el APK actualizado en un Samsung Galaxy Note8 (SM-N950F). Se comprobó que al cambiar de horizontal a vertical permanecen las tres tareas, la tarea completada y el contador de dos pendientes. La versión inicialmente instalada era la del punto de partida y no contenía `TodoViewModel` ni `TodoRepository`; actualizar el APK corrigió la pérdida de tareas al rotar.
 
-1. Abrir este proyecto en Android Studio y ejecutar en un teléfono o emulador compatible.
-2. Agregar tres tareas, completar una y escribir texto sin enviarlo. Rotar y comprobar que se conservan la lista, la tarea completada y el texto. Eliminar una tarea y revisar el contador.
-3. Guardar una captura real en `docs/capturas/todo-funcionando.png` e insertarla aquí con `![App funcionando](docs/capturas/todo-funcionando.png)`.
-4. Revisar esta explicación y expresar lo aprendido con tus propias palabras y experiencia.
-5. Comprobar que el repositorio sea público o tenga acceso para el docente. Verificar el enlace en incógnito y entregarlo en Canvas.
+![App en vertical después de rotar: tres tareas, una completada y dos pendientes](docs/capturas/todo-funcionando.png)
 
-La implementación y este borrador de documentación se prepararon con asistencia de IA; la revisión personal y la ejecución del ejercicio siguen pendientes.
+![Las mismas tareas en horizontal antes de rotar](docs/capturas/todo-horizontal.png)
+
+### Pasos pendientes para entregar
+
+1. Actualizar la copia de Android Studio desde este repositorio antes de volver a instalar la app; una copia antigua reinstala la versión sin ViewModel.
+2. Verificar también la conservación del texto sin enviar y la eliminación de tareas en el teléfono.
+3. Revisar esta explicación y expresar lo aprendido con tus propias palabras y experiencia.
+4. Comprobar que el repositorio sea público o tenga acceso para el docente. Verificar el enlace en incógnito y entregarlo en Canvas.
+
+La implementación y este borrador de documentación se prepararon con asistencia de IA; la revisión personal de la explicación sigue pendiente.
 
 ---
 
